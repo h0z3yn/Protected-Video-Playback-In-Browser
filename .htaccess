@@ -1,0 +1,15 @@
+# Enable the rewrite engine to allow URL rewriting
+RewriteEngine On
+
+# Restrict access to files in the 'hiddenVideos' directory
+# Only allow requests where the referrer is from 'https://yourdomain.com'
+# If the referrer does not match, deny access
+RewriteCond %{HTTP_REFERER} !^https://yourdomain.com/.*$ [NC]
+RewriteRule ^hiddenVideos/.*$ - [F,L]
+
+# php -- BEGIN cPanel-generated handler, do not edit
+# Set the “ea-php81” package as the default PHP version for handling .php, .php8, and .phtml files
+<IfModule mime_module>
+  AddHandler application/x-httpd-ea-php81 .php .php8 .phtml
+</IfModule>
+# php -- END cPanel-generated handler, do not edit
