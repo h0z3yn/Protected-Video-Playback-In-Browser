@@ -1,6 +1,6 @@
-# Protected Video Playback
+# Protected Video Playback In Browser
 
-This project demonstrates a simple implementation of protected video playback using PHP sessions and token-based access control. The solution ensures that only authorized users can access and view the video content.
+This project demonstrates a simple implementation of protected video playback using PHP sessions and token-based access control. The solution ensures that only authorized users can access and view the video content, while also preventing unauthorized downloading of the video using download managers.
 
 ## Project Structure
 
@@ -28,6 +28,8 @@ This project demonstrates a simple implementation of protected video playback us
 2. **View the Video**: Access `index.php` via your web browser. This page will generate a unique token and display the video player.
 
 3. **Playback Protection**: The video playback is protected by a token-based system. The `video.php` script ensures that only requests with a valid token can access the video file. Unauthorized access attempts will be denied.
+
+4. **Download Prevention**: The setup includes mechanisms to prevent downloading of the video using download managers. The video content is protected to ensure it is viewable only through the site.
 
 ## Configuration
 
